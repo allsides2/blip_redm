@@ -83,7 +83,7 @@ function AddBlip(BlipSettings)
     return blipEntity
 end
 
--- Adiciona os blips ao iniciar
+
 Citizen.CreateThread(function()
     ClearBlips()
     for _, blipSettings in ipairs(Config.Blips) do
@@ -91,7 +91,7 @@ Citizen.CreateThread(function()
     end
 end)
 
--- Limpa os blips quando o recurso for parado
+
 AddEventHandler('onResourceStop', function(resourceName)
     if (GetCurrentResourceName() ~= resourceName) then
         return
